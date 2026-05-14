@@ -1,6 +1,8 @@
 # Mega Internet Safety Blocklist
 
-A broad uBlock Origin-compatible blocklist for stricter, safer browsing.
+A broad uBlock Origin-compatible domain blocklist for stricter, safer browsing.
+
+This repository contains domain names and filter syntax for user-controlled content filtering only. It does not host, embed, mirror, or promote third-party media or services.
 
 Use the raw list URL:
 
@@ -25,3 +27,4 @@ The list is also plain filter syntax, so other blockers that support uBlock-styl
 - The list currently contains 67k+ domain rules.
 - It is intentionally broad and may block more than a default browser setup.
 - If a site breaks, disable this list temporarily or add a local exception in your blocker.
+- Issues and pull requests should be limited to list accuracy, false positives, and filter compatibility.

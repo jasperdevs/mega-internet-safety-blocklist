@@ -1,5 +1,7 @@
 ! Title: Mega Internet Safety Blocklist
-! Description: A broad uBlock Origin-compatible blocklist for stricter, safer browsing.
+! Description: A broad uBlock Origin-compatible domain blocklist for stricter, safer browsing.
+! Purpose: Domain names and filter syntax for user-controlled content filtering only.
+! Notice: This list does not host, embed, mirror, or promote third-party media or services.
 ! Total unique domain rules: 67053
 ! Format: ||domain^
 ! Last updated: 2026-03-20
