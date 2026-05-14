@@ -1,6 +1,6 @@
 # ⚡ Mega Internet Safety Blocklist
 
-![rules](https://img.shields.io/badge/rules-868k%2B-blue)
+![rules](https://img.shields.io/badge/rules-867k%2B-blue)
 ![format](https://img.shields.io/badge/formats-uBlock%20%2B%20DNS-2ea44f)
 ![license](https://img.shields.io/badge/license-GPL--3.0-lightgrey)
 

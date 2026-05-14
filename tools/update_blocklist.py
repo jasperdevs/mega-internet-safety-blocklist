@@ -51,6 +51,17 @@ OUT_OF_SCOPE_RE = re.compile(
     r"poker|roulette|slots?|sportsbook|tobacco|vape|virus|weapon|weed|wine"
 )
 
+CONDITIONAL_OUT_OF_SCOPE_RE = re.compile(
+    r"bank|business|clickbank|coupon|crypto|financ|religion|shopping"
+)
+
+SCOPE_RE = re.compile(
+    r"adult|anal|ass|bdsm|boob|bondage|camgirl|cams?|cock|escort|erotic|fuck|"
+    r"gay|gore|hentai|lesbian|milf|naked|nude|porn|pussy|sex|shock|teen|xxx"
+)
+
+FALSE_SCOPE_RE = re.compile(r"essex|middlesex|sussex|wessex")
+
 
 def fetch(source: str | Path) -> str:
     if isinstance(source, Path):
@@ -85,7 +96,12 @@ def extract_domain(line: str) -> str | None:
 
 
 def is_out_of_scope(domain: str) -> bool:
-    return bool(OUT_OF_SCOPE_RE.search(domain))
+    if OUT_OF_SCOPE_RE.search(domain):
+        return True
+    scope_domain = FALSE_SCOPE_RE.sub("", domain)
+    if CONDITIONAL_OUT_OF_SCOPE_RE.search(domain) and not SCOPE_RE.search(scope_domain):
+        return True
+    return False
 
 
 def main() -> int:

@@ -66,6 +66,17 @@ OUT_OF_SCOPE_RE = re.compile(
     r"poker|roulette|slots?|sportsbook|tobacco|vape|virus|weapon|weed|wine"
 )
 
+CONDITIONAL_OUT_OF_SCOPE_RE = re.compile(
+    r"bank|business|clickbank|coupon|crypto|financ|religion|shopping"
+)
+
+SCOPE_RE = re.compile(
+    r"adult|anal|ass|bdsm|boob|bondage|camgirl|cams?|cock|escort|erotic|fuck|"
+    r"gay|gore|hentai|lesbian|milf|naked|nude|porn|pussy|sex|shock|teen|xxx"
+)
+
+FALSE_SCOPE_RE = re.compile(r"essex|middlesex|sussex|wessex")
+
 
 def read_filter_domains() -> list[str]:
     domains = []
@@ -113,7 +124,15 @@ def main() -> int:
     if false_positives:
         fail("obvious safe domains are blocked: " + ", ".join(false_positives))
 
-    out_of_scope = [domain for domain in filter_domains if OUT_OF_SCOPE_RE.search(domain)]
+    out_of_scope = [
+        domain
+        for domain in filter_domains
+        if OUT_OF_SCOPE_RE.search(domain)
+        or (
+            CONDITIONAL_OUT_OF_SCOPE_RE.search(domain)
+            and not SCOPE_RE.search(FALSE_SCOPE_RE.sub("", domain))
+        )
+    ]
     if out_of_scope:
         fail("out-of-scope category domains are blocked: " + ", ".join(out_of_scope[:20]))
 
