@@ -1,0 +1,13 @@
+# Domains excluded from the generated list because they are obvious false positives
+# or too broad for this list's safety-filtering scope.
+chicagoreader.com
+coding-resources.com
+political-resources.com
+adidascampus.fr
+adult-ed.school
+adult-education-courses01.sbs
+adult-education-hub.online
+adulteducation.online
+adulteducation2.blogspot.com
+alameda-adult-school.org
+aliexpresscouponbestproduct.blogspot.com
