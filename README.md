@@ -1,6 +1,6 @@
 # ⚡ Mega uBlock Origin Safety Blocklist
 
-![domains](https://img.shields.io/badge/domains-499%2C360-brightgreen)
+![domains](https://img.shields.io/badge/domains-199%2C500-brightgreen)
 ![format](https://img.shields.io/badge/format-uBlock%20Origin-2ea44f)
 
 A broad uBlock Origin filter list for stricter, safer browsing.
@@ -23,7 +23,7 @@ Raw list:
 ## Scope
 
 - Focused on adult and graphic shock-content sites.
-- Includes hostname regex fallbacks for gore/shock terms.
+- Includes compact hostname regex rules for large adult/shock domain families.
 - Excludes known non-scope categories such as gambling, drugs, alcohol, weapons, and generic security feeds.
 - Deduplicated and sorted.
 - Intentionally broad, so false positives are still possible.
