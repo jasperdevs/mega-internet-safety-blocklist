@@ -1,9 +1,9 @@
-# ⚡ Mega Internet Safety Blocklist
+# ⚡ Mega uBlock Origin Safety Blocklist
 
-![domains](https://img.shields.io/badge/domains-1%2C254%2C712-brightgreen)
+![domains](https://img.shields.io/badge/domains-467%2C586-brightgreen)
 ![format](https://img.shields.io/badge/format-uBlock%20Origin-2ea44f)
 
-A broad uBlock Origin blocklist for stricter, safer browsing.
+A broad uBlock Origin filter list for stricter, safer browsing.
 
 This repository contains filter rules for user-controlled content filtering only. It does not host, embed, mirror, or promote third-party media or services.
 
@@ -11,7 +11,7 @@ This repository contains filter rules for user-controlled content filtering only
 
 Raw list:
 
-`https://raw.githubusercontent.com/jasperdevs/mega-internet-safety-blocklist/main/mega-internet-safety-blocklist.txt`
+`https://raw.githubusercontent.com/jasperdevs/mega-ublock-origin-safety-blocklist/main/mega-ublock-origin-safety-blocklist.txt`
 
 1. Open the uBlock Origin dashboard.
 2. Go to **My filters**.
