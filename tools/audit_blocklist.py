@@ -144,7 +144,9 @@ def audit_core() -> list[str]:
     if false_positives:
         fail("known safe domains are blocked: " + ", ".join(false_positives))
 
-    non_scope_but_blocked = sorted(update_blocklist.BROAD_NON_SCOPE_DOMAINS & generated)
+    non_scope_but_blocked = sorted(
+        domain for domain in filter_domains if update_blocklist.is_broad_non_scope_domain(domain)
+    )
     if non_scope_but_blocked:
         fail("broad non-scope domains are still blocked: " + ", ".join(non_scope_but_blocked[:20]))
 

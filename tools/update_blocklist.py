@@ -72,9 +72,11 @@ BROAD_NON_SCOPE_DOMAINS = {
     "adulteducation2.blogspot.com",
     "alameda-adult-school.org",
     "aliexpresscouponbestproduct.blogspot.com",
+    "ambitionbox.com",
     "b-cdn.net",
     "badoo.com",
     "camscanner.com",
+    "candy.ai",
     "character.ai",
     "chicagoreader.com",
     "coding-resources.com",
@@ -84,29 +86,41 @@ BROAD_NON_SCOPE_DOMAINS = {
     "dramaboxdb.com",
     "evt.mxplay.com",
     "fc2.com",
+    "fetlife.com",
+    "fishki.net",
     "flirtify.com",
     "gotinder.com",
+    "gptgirlfriend.online",
     "grindr.com",
     "grindr.mobi",
     "hemsida.eu",
     "imgbox.com",
     "kinopoisk.ru",
     "konimbo.co.il",
+    "joyreactor.cc",
     "likee.video",
+    "lovense.com",
     "m.vk.com",
     "match.com",
     "meusitehostgator.com.br",
     "mixh.jp",
+    "nicovideo.jp",
+    "okcupid.com",
+    "ourdream.ai",
     "political-resources.com",
     "popcash.net",
     "prv.pl",
     "sdk-push.hiaiabc.com",
+    "sniffies.com",
+    "spicychat.ai",
+    "super.cz",
     "temporary.site",
     "transip.me",
     "use-application-dns.net",
     "via.placeholder.com",
     "video-preview.s3.yandex.net",
     "xiaohongshu.com",
+    "yourtango.com",
 }
 
 
@@ -143,7 +157,7 @@ def extract_domain(line: str) -> str | None:
 
 
 def is_out_of_scope(domain: str) -> bool:
-    if domain in BROAD_NON_SCOPE_DOMAINS:
+    if is_broad_non_scope_domain(domain):
         return True
     if OUT_OF_SCOPE_RE.search(domain):
         return True
@@ -153,6 +167,13 @@ def is_out_of_scope(domain: str) -> bool:
     if CONDITIONAL_OUT_OF_SCOPE_RE.search(domain) and not SCOPE_RE.search(scope_domain):
         return True
     return False
+
+
+def is_broad_non_scope_domain(domain: str) -> bool:
+    return any(
+        domain == broad_domain or domain.endswith(f".{broad_domain}")
+        for broad_domain in BROAD_NON_SCOPE_DOMAINS
+    )
 
 
 def is_likely_in_scope(domain: str) -> bool:
