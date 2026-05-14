@@ -8,15 +8,6 @@ A broad uBlock Origin-compatible domain blocklist for stricter, safer browsing.
 
 This repository contains domain names and filter syntax for user-controlled content filtering only. It does not host, embed, mirror, or promote third-party media or services.
 
-## Contents
-
-1. [Lists](#lists)
-2. [Use with uBlock Origin](#use-with-ublock-origin)
-3. [Use with DNS blockers](#use-with-dns-blockers)
-4. [Scope](#scope)
-5. [Updating](#updating)
-6. [License](#license)
-
 ## Lists
 
 | List | Raw URL | Format |
