@@ -32,7 +32,7 @@ This list is very large. If your DNS blocker becomes slow, use the uBlock Origin
 ## Scope
 
 - Generated from the recovered local list plus maintained public sources.
-- Focused on adult and graphic shock-content domains, with curated gore/shock roots included.
+- Focused on adult and graphic shock-content domains.
 - The uBlock list also includes hostname regex fallbacks for gore/shock terms.
 - Keeps domains with direct scope signals or confirmation across multiple source lists.
 - Excludes known non-scope categories such as gambling, drugs, alcohol, weapons, and generic security feeds.
