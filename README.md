@@ -36,19 +36,9 @@ This list is very large. If your DNS blocker becomes slow, use the uBlock Origin
 - Keeps domains with direct scope signals or confirmation across multiple source lists.
 - Excludes known non-scope categories such as gambling, drugs, alcohol, weapons, and generic security feeds.
 - Deduplicated on every build.
-- Checked by automated scope and false-positive audits.
 - Intentionally broad, so false positives are still possible.
 
 If a site breaks, disable this list temporarily or add a local exception in your blocker. Issues and pull requests should be limited to list accuracy, false positives, and filter compatibility.
-
-## Updating
-
-Regenerate both list files:
-
-```sh
-python tools/update_blocklist.py
-python tools/audit_blocklist.py
-```
 
 ## License
 
