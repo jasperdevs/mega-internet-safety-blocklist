@@ -3,7 +3,6 @@
 
 from __future__ import annotations
 
-import datetime as dt
 import re
 import urllib.request
 from pathlib import Path
@@ -32,14 +31,6 @@ SOURCES = [
         "https://blocklistproject.github.io/Lists/adguard/porn-ags.txt",
     ),
 ]
-
-HEADER = """! Title: Mega Internet Safety Blocklist
-! Description: A broad uBlock Origin-compatible domain blocklist for stricter, safer browsing.
-! Purpose: Domain names and filter syntax for user-controlled content filtering only.
-! Notice: This list does not host, embed, mirror, or promote third-party media or services.
-! Format: ||domain^
-! Sources: see SOURCE-NOTICES.md
-"""
 
 DOMAIN_RE = re.compile(
     r"^(?=.{1,253}$)(?!-)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}$"
@@ -126,16 +117,9 @@ def main() -> int:
 
     domains.difference_update(allowlist)
 
-    today = dt.date.today().isoformat()
     sorted_domains = sorted(domains)
 
-    filter_lines = [
-        HEADER.rstrip(),
-        f"! Last generated: {today}",
-        f"! Total unique domain rules: {len(domains)}",
-        "",
-    ]
-    filter_lines.extend(f"||{domain}^" for domain in sorted_domains)
+    filter_lines = [f"||{domain}^" for domain in sorted_domains]
     FILTER_OUTPUT.write_text("\n".join(filter_lines) + "\n", encoding="utf-8", newline="\n")
 
     DNS_OUTPUT.write_text("\n".join(sorted_domains) + "\n", encoding="utf-8", newline="\n")
