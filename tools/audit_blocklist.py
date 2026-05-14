@@ -61,7 +61,9 @@ KNOWN_SAFE_DOMAINS = {
 }
 
 OUT_OF_SCOPE_RE = re.compile(
-    r"betting|blackjack|casino|gambl|poker|roulette|sportsbook"
+    r"alcohol|antivirus|beer|betting|bingo|blackjack|cannabis|casino|cocaine|drug|"
+    r"firearm|gambl|gunshop|heroin|liquor|lottery|malware|marijuana|phishing|"
+    r"poker|roulette|slots?|sportsbook|tobacco|vape|virus|weapon|weed|wine"
 )
 
 
@@ -113,7 +115,7 @@ def main() -> int:
 
     out_of_scope = [domain for domain in filter_domains if OUT_OF_SCOPE_RE.search(domain)]
     if out_of_scope:
-        fail("out-of-scope gambling domains are blocked: " + ", ".join(out_of_scope[:20]))
+        fail("out-of-scope category domains are blocked: " + ", ".join(out_of_scope[:20]))
 
     allowed_but_blocked = sorted(read_allowlist() & generated)
     if allowed_but_blocked:

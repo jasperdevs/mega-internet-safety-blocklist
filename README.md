@@ -1,6 +1,6 @@
 # ⚡ Mega Internet Safety Blocklist
 
-![rules](https://img.shields.io/badge/rules-869k%2B-blue)
+![rules](https://img.shields.io/badge/rules-868k%2B-blue)
 ![format](https://img.shields.io/badge/formats-uBlock%20%2B%20DNS-2ea44f)
 ![license](https://img.shields.io/badge/license-GPL--3.0-lightgrey)
 
@@ -42,6 +42,7 @@ This list is very large. If your DNS blocker becomes slow, use the uBlock Origin
 
 - Generated from the recovered local list plus maintained public sources.
 - Focused on adult and graphic shock-content domains.
+- Excludes known non-scope categories such as gambling, drugs, alcohol, weapons, and generic security feeds.
 - Deduplicated on every build.
 - Checked against an allowlist and a small obvious-safe-domain audit.
 - Intentionally broad, so false positives are still possible.

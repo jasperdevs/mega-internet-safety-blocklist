@@ -54,7 +54,9 @@ DOMAIN_RE = re.compile(
 )
 
 OUT_OF_SCOPE_RE = re.compile(
-    r"betting|blackjack|casino|gambl|poker|roulette|sportsbook"
+    r"alcohol|antivirus|beer|betting|bingo|blackjack|cannabis|casino|cocaine|drug|"
+    r"firearm|gambl|gunshop|heroin|liquor|lottery|malware|marijuana|phishing|"
+    r"poker|roulette|slots?|sportsbook|tobacco|vape|virus|weapon|weed|wine"
 )
 
 
