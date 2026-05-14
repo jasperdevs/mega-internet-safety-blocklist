@@ -13,4 +13,6 @@ The generated output is distributed under GPL-3.0 because it includes GPL-3.0 so
 | OISD domain blocklist | `https://nsfw.oisd.nl/` | GPL-3.0 |
 | The Block List Project | `https://blocklistproject.github.io/Lists/adguard/porn-ags.txt` | Unlicense |
 
+Additional gore/shock coverage is curated from public shock-site references and popularity checks. The uBlock-format list also includes hostname regex fallback rules for gore/shock terms. No third-party gore list is mirrored directly in this repository.
+
 This repository contains domain names and filter syntax for user-controlled content filtering only. It does not host, embed, mirror, or promote third-party media or services.

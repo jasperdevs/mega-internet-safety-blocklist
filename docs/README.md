@@ -12,7 +12,7 @@ This repository contains domain names and filter syntax for user-controlled cont
 
 | List | Raw URL | Format |
 | --- | --- | --- |
-| Browser filter list | `https://raw.githubusercontent.com/jasperdevs/mega-internet-safety-blocklist/main/mega-internet-safety-blocklist.txt` | `||domain^` |
+| Browser filter list | `https://raw.githubusercontent.com/jasperdevs/mega-internet-safety-blocklist/main/mega-internet-safety-blocklist.txt` | uBlock rules |
 | DNS domain export | `https://raw.githubusercontent.com/jasperdevs/mega-internet-safety-blocklist/main/mega-internet-safety-domains.txt` | `domain.com` |
 
 ## Use with uBlock Origin
@@ -32,7 +32,8 @@ This list is very large. If your DNS blocker becomes slow, use the uBlock Origin
 ## Scope
 
 - Generated from the recovered local list plus maintained public sources.
-- Focused on adult and graphic shock-content domains.
+- Focused on adult and graphic shock-content domains, with curated gore/shock roots included.
+- The uBlock list also includes hostname regex fallbacks for gore/shock terms.
 - Keeps domains with direct scope signals or confirmation across multiple source lists.
 - Excludes known non-scope categories such as gambling, drugs, alcohol, weapons, and generic security feeds.
 - Deduplicated on every build.
