@@ -5,7 +5,7 @@ A broad uBlock Origin-compatible blocklist for stricter, safer browsing.
 Use the raw list URL:
 
 ```text
-https://raw.githubusercontent.com/jasprcodess/mega-internet-safety-blocklist/main/mega-internet-safety-blocklist.txt
+https://raw.githubusercontent.com/jasperdevs/mega-internet-safety-blocklist/main/mega-internet-safety-blocklist.txt
 ```
 
 ## Use
@@ -25,4 +25,3 @@ The list is also plain filter syntax, so other blockers that support uBlock-styl
 - The list currently contains 67k+ domain rules.
 - It is intentionally broad and may block more than a default browser setup.
 - If a site breaks, disable this list temporarily or add a local exception in your blocker.
-
