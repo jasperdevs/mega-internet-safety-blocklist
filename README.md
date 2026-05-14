@@ -1,6 +1,6 @@
 # ⚡ Mega uBlock Origin Safety Blocklist
 
-![domains](https://img.shields.io/badge/domains-467%2C586-brightgreen)
+![domains](https://img.shields.io/badge/domains-499%2C360-brightgreen)
 ![format](https://img.shields.io/badge/format-uBlock%20Origin-2ea44f)
 
 A broad uBlock Origin filter list for stricter, safer browsing.
