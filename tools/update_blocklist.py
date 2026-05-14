@@ -41,14 +41,6 @@ HEADER = """! Title: Mega Internet Safety Blocklist
 ! Sources: see SOURCE-NOTICES.md
 """
 
-DNS_HEADER = """# Title: Mega Internet Safety Blocklist - DNS domain export
-# Description: Plain domain export for DNS sinkholes and network-level filters.
-# Purpose: Domain names for user-controlled content filtering only.
-# Notice: This list does not host, embed, mirror, or promote third-party media or services.
-# Format: domain
-# Sources: see SOURCE-NOTICES.md
-"""
-
 DOMAIN_RE = re.compile(
     r"^(?=.{1,253}$)(?!-)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}$"
 )
@@ -130,14 +122,7 @@ def main() -> int:
     filter_lines.extend(f"||{domain}^" for domain in sorted_domains)
     FILTER_OUTPUT.write_text("\n".join(filter_lines) + "\n", encoding="utf-8", newline="\n")
 
-    dns_lines = [
-        DNS_HEADER.rstrip(),
-        f"# Last generated: {today}",
-        f"# Total unique domains: {len(domains)}",
-        "",
-    ]
-    dns_lines.extend(sorted_domains)
-    DNS_OUTPUT.write_text("\n".join(dns_lines) + "\n", encoding="utf-8", newline="\n")
+    DNS_OUTPUT.write_text("\n".join(sorted_domains) + "\n", encoding="utf-8", newline="\n")
 
     print(f"Wrote {FILTER_OUTPUT}")
     print(f"Wrote {DNS_OUTPUT}")
