@@ -20,8 +20,9 @@ This repository contains domain names and filter syntax for user-controlled cont
 1. Open the uBlock Origin dashboard.
 2. Go to **My filters**.
 3. Enable **My custom filters**.
-4. Paste the browser filter list URL into the textbox.
-5. Click **Apply changes**.
+4. Open the browser filter list raw URL and copy the filter rules.
+5. Paste the rules into the textbox.
+6. Click **Apply changes**.
 
 ## Use with DNS blockers
 
